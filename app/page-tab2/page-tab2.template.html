@@ -1,0 +1,30 @@
+PAGE TAB 2
+<br>
+
+name = {{name}}<br><br>
+submeniuId = {{submeniuId}}<br><br>
+<br><br>
+$ctrl.name = {{$ctrl.name}}<br><br>
+$ctrl.apiResult = {{$ctrl.apiResult}}<br>
+<br><br>
+
+
+Sort by:
+<select ng-model="$ctrl.orderProp">
+  <option value="name">Name</option>
+  <option value="quantity">Quantity</option>
+</select>
+
+<b>Fruits:</b>
+<input ng-model="$ctrl.query">
+<table>
+	<th>
+	<td>Name</td>
+	<td>Quantity</td>
+	</th>
+
+	<tr ng-repeat="item in items | filter:$ctrl.query  | orderBy:$ctrl.orderProp">
+		<td>{{item.name}}</td>
+		<td>{{item.quantity}}</td>
+	</tr>
+	</ul>

@@ -1,0 +1,81 @@
+<md-content>
+	<md-tabs id="as-secondary-menu" class="md-primary" md-center-tabs md-dynamic-height>
+		<md-tab label="Sub Link Menu">
+			<md-content layout="column">
+
+				<page-header layout="row" class="md-padding">
+					<div id="page-info" flex>
+						<h2 class="md-display-1">Title</h2>
+						<p class="md-body-1">You have <a href="#">2 pending</a> ads to be approved</p>
+					</div>
+					<md-button layout-align="center center" layout="row" class="md-raised">
+						<md-icon md-font-icon="control_point"></md-icon>
+						<ng-md-icon icon="control_point" style="fill: #65669a" size="15"></ng-md-icon>
+						<p>Filter</p>
+					</md-button>
+					<md-button layout-align="center center" layout="row" class="md-raised">
+						<ng-md-icon icon="date_range" style="fill: #65669a" size="22"></ng-md-icon>
+						<p>Last 30 days</p>
+					</md-button>
+					<input>
+					<md-button layout-align="center center" layout="row" class="md-raised md-accent">
+						<ng-md-icon icon="add_circle" style="fill: white" size="18"></ng-md-icon>
+						Create New
+					</md-button>
+				</page-header>
+
+				<page-content class="md-padding">
+					<p class="md-body-1">External content for `<span>{{currentNavItem}}</span></p>
+					<!-- <div ng-controller="PurchasesCtrl"> -->
+					<div>
+						<table cellspacing="0">
+							<tr class="first">
+								<th class="first" ng-click="changeSorting('date')">Date</th>
+								<th ng-click="changeSorting('text')">Description</th>
+								<th ng-click="changeSorting('price')">Amount</th>
+								<th ng-click="changeSorting('availability')">Status</th>
+							</tr>
+							<tr ng-repeat="purchase in purchases.data|orderBy:sort.column:sort.descending">
+								<td class="first">{{purchase.date}}</td>
+								<td>{{purchase.text}}</td>
+								<td>{{purchase.price}}</td>
+								<td>{{purchase.availability}}</td>
+							</tr>
+						</table>
+					</div>
+				</page-content>
+
+			</md-content>
+		</md-tab>
+		<md-tab label="Sub Link Menu">
+			<md-content class="md-padding">
+				<h2 class="md-display-1">Sub Link Menu</h2>
+				<p class="md-body-1">...</p>
+			</md-content>
+		</md-tab>
+		<md-tab label="Sub Link Menu">
+			<md-content class="md-padding">
+				<h2 class="md-display-1">Sub Link Menu</h2>
+				<p class="md-body-1">...</p>
+			</md-content>
+		</md-tab>
+		<md-tab label="Sub Link Menu">
+			<md-content class="md-padding">
+				<h2 class="md-display-1">Sub Link Menu</h2>
+				<p class="md-body-1">...</p>
+			</md-content>
+		</md-tab>
+		<md-tab label="Sub Link Menu">
+			<md-content class="md-padding">
+				<h2 class="md-display-1">Sub Link Menu</h2>
+				<p class="md-body-1">...</p>
+			</md-content>
+		</md-tab>
+		<md-tab label="Sub Link Menu">
+			<md-content class="md-padding">
+				<h2 class="md-display-1">Sub Link Menu</h2>
+				<p class="md-body-1">...</p>
+			</md-content>
+		</md-tab>
+	</md-tabs>
+</md-content>
