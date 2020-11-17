@@ -16,6 +16,10 @@ md-nav-bar {
   align-self: flex-start;
   text-align: left;
 }
+app-component md-toolbar h1 a {
+  color: white;
+  text-decoration: none;
+}
 app-component md-toolbar h1 {
   font-size: 30px;
   padding: 4px 0 0 36px;
@@ -64,6 +68,10 @@ md-nav-bar md-nav-ink-bar {
   text-transform: capitalize;
   padding: 3px 0 0;
   margin: 0 25px 0;
+  color: rgb(255 255 255 / 0.6);
+}
+#as-primary-menu .md-button.md-active {
+  color: rgb(255 255 255 / 1);
 }
 
 #as-secondary-menu md-tab-item {
@@ -219,6 +227,24 @@ md-content {
 .page-subtitle a {
   color: #506cff;
   font-weight: 500;
+}
+
+.toolset {
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid rgba(105, 105, 155, 0.2);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 5px 15px;
+}
+button.toolset,
+input.toolset {
+  margin: 6px 4px;
+}
+input.toolset::placeholder {
+  color: rgba(105, 105, 155, 0.2);
+  font-size: 12px;
 }
 
 md-tab-content {

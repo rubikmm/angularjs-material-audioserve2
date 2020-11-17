@@ -6,6 +6,7 @@ import "angular-material-icons";
 // Import your app stylesheets
 import "./style.css";
 import "./app/lib/md-table/md-table.css";
+import "./app/lib/material-icons/material-icons.css";
 
 // Import your app functionality
 import "./app/app.module.js";

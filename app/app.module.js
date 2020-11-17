@@ -3,7 +3,6 @@ import angular from "angular";
 // Create the module where our functionality can attach to
 let appModule = angular.module("app", [require("angular-route")]).config([
   "$locationProvider",
-
   "$routeProvider",
 
   function config($locationProvider, $routeProvider) {
@@ -31,11 +30,7 @@ import PageTab2Ctrl from "./page-tab2/page-tab2.controller";
 
 appModule.component("appComponent", {
   templateUrl: "app/app.template.html",
-  controller: AppCtrl,
-  function() {
-    this.navbar = "home";
-    console.log(this);
-  }
+  controller: AppCtrl
 });
 
 appModule.component("userInformationCardComponent", {
