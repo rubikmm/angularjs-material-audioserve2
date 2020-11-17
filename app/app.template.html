@@ -1,25 +1,18 @@
 <md-toolbar>
+
+
 	<h1><a href="./">AUDIO<span>SERVE</span></a></h1>
-	<md-nav-bar id="as-primary-menu" *navbar nav-bar-aria-label="navigation links" md-selected-nav-item="page1">
-		<md-nav-item md-nav-href="#!/pageTab1" name="page1" value="page1">
-			Main Tab
+
+
+	<md-nav-bar id="as-primary-menu" *navbar nav-bar-aria-label="navigation links" md-selected-nav-item="pageTab1">
+
+		<md-nav-item ng-repeat="item in primaryMenu" md-nav-href="#!/{{item.value}}" name="{{item.value}}">
+			{{item.label}}
 		</md-nav-item>
-		<md-nav-item md-nav-href="#!/pageTab2" name="page2" value="page2">
-			Main Tab
-		</md-nav-item>
-		<md-nav-item md-nav-href="#!/pageTab2" name="page3">
-			Main Tab
-		</md-nav-item>
-		<md-nav-item md-nav-click="goto('page4')" name="page4">
-			Main Tab
-		</md-nav-item>
-		<md-nav-item md-nav-click="goto('page5')" name="page5">
-			Main Tab
-		</md-nav-item>
-		<md-nav-item md-nav-click="goto('page6')" name="page6">
-			Main Tab
-		</md-nav-item>
+
 	</md-nav-bar>
+
+
 	<md-input-container>
 		<md-button ng-click="toggleSearch = !toggleSearch" id="searchButton">
 			<i class="material-icons md-24">search</i>
@@ -30,6 +23,9 @@
 
 	<user-information-card-component></user-information-card-component>
 
+
 </md-toolbar>
+
+
 
 <div ng-cloak ng-view></div>
