@@ -18,16 +18,16 @@ md-nav-bar {
 }
 app-component md-toolbar h1 {
   font-size: 30px;
-  padding: 0 35px;
-  margin: 0;
-  line-height: 100px;
+  padding: 4px 0 0 36px;
+  margin: 0 20px 0 0;
+  line-height: 96px;
 }
 app-component md-toolbar h1 span {
   font-weight: 300;
 }
 #as-primary-menu .md-nav-item:first-of-type .md-button,
 .md-nav-item:first-of-type {
-  margin: 0;
+  /* margin: 0; */
 }
 md-toolbar
   > md-nav-bar.md-default-theme
@@ -48,7 +48,7 @@ md-nav-bar md-nav-ink-bar {
 }
 
 #as-primary-menu {
-  font-size: 24px;
+  font-size: 22px;
   text-transform: lowercase !important;
 }
 #as-primary-menu .md-nav-bar {
@@ -60,10 +60,10 @@ md-nav-bar md-nav-ink-bar {
 #as-primary-menu .md-button {
   font-size: 24px;
   height: 100px;
-  line-height: 100px;
+  line-height: 98px;
   text-transform: capitalize;
-  padding: 0 8px;
-  margin: 0 16px;
+  padding: 3px 0 0;
+  margin: 0 25px 0;
 }
 
 #as-secondary-menu md-tab-item {
@@ -72,24 +72,24 @@ md-nav-bar md-nav-ink-bar {
   padding-top: 0;
   color: rgba(101, 102, 154, 0.54);
   text-transform: capitalize;
-  font-weight: 500;
-  font-size: 15px;
-  margin: 0 25px;
+  font-weight: 400;
+  font-size: 16px;
+  /* margin: 0 25px; */
   padding: 0;
 }
 #as-secondary-menu md-tab-item.md-active {
   color: rgba(101, 102, 154, 1);
 }
-/* md-tabs.md-default-theme .md-tab,
-md-tabs .md-tab {
-} */
-md-tabs-canvas,
+md-tabs[md-border-bottom] md-tabs-wrapper md-tabs-canvas,
 md-pagination-wrapper {
   height: auto;
   background: white;
 }
+md-tabs[md-border-bottom] md-tabs-wrapper {
+  border-width: 0;
+}
 md-tabs.md-primary > md-tabs-wrapper {
-  box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.05);
   z-index: 9999;
 }
 md-tabs-content-wrapper {
@@ -104,6 +104,10 @@ md-tabs.md-primary
   height: 3px;
 }
 
+/*
+  INFO CARD
+*/
+
 md-card.md-default-theme,
 md-card {
   background-color: transparent;
@@ -111,27 +115,52 @@ md-card {
   font-size: 40px !important;
   box-shadow: none;
   display: block;
+  margin-right: 15px;
 }
-md-card.md-default-theme
-  md-card-title
-  md-card-title-text:not(:only-child)
-  .md-subhead,
-md-card md-card-title md-card-title-text:not(:only-child) .md-subhead {
-  color: white;
-  font-size: 11pt;
+md-card md-card-title md-card-title-text .md-subhead {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 16px;
   font-weight: 200;
+}
+md-card md-card-title .md-headline {
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: normal;
 }
 md-card md-card-title {
   /* padding: 0; */
-  padding: 20px 16px 16px;
+  padding: 22px 16px 12px;
 }
 md-card md-card-title md-card-title-media .md-media-sm {
   width: 45px;
   height: 45px;
 }
-md-card md-card-title .md-headline {
-  font-size: 14pt;
-  line-height: normal;
+md-card .card-media {
+  margin: 5px 12px 0 0;
+}
+md-card .md-card-image {
+  border-radius: 30px;
+  width: 46px;
+  height: 46px;
+}
+/*
+  Search Button
+*/
+#searchButton {
+  margin-top: 12px;
+  /* background-color: #eee; */
+  text-transform: capitalize;
+}
+#searchButton span {
+  /* display: inline-block; */
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+page-header {
+  margin-bottom: 30px;
 }
 
 md-input-container {
@@ -170,6 +199,9 @@ md-content {
   background-color: transparent !important;
 }
 
+#page-info {
+  margin-left: 25px;
+}
 .page-title {
   margin: 0;
   color: #65669a;
@@ -190,7 +222,7 @@ md-content {
 }
 
 md-tab-content {
-  padding: 60px 20px;
+  padding: 75px 20px 0;
 }
 
 .md-button {
@@ -201,7 +233,7 @@ md-tab-content {
 .btn_createnew {
   text-transform: capitalize;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   background-color: #65de71;
   border-radius: 5px;
@@ -227,3 +259,40 @@ ng-md-icon {
 /*
 Table
 */
+md-table {
+  margin-left: 10px;
+}
+
+/* Rules for sizing the icon. */
+.md-18 {
+  font-size: 18px;
+}
+.md-24 {
+  font-size: 24px;
+}
+.md-36 {
+  font-size: 36px;
+}
+.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.md-table-td-more .material-icons {
+  color: #eee;
+}

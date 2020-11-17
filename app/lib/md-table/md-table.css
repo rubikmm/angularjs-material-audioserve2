@@ -1,29 +1,31 @@
-/**
-* 
-*/
 .md-table {
-  min-width: 100%;
-  border-collapse: collapse;
+  min-width: 99%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-top: 30px;
 }
 
 .md-table tbody tr:hover,
 .md-table tbody tr:focus {
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(80, 160, 255, 0.02);
 }
 
 .md-table-header {
-  border-bottom: 1px solid rgb(230, 230, 230);
-  color: rgb(130, 130, 130);
-  text-align: left;
-  font-size: 0.75em;
-  font-weight: 700;
+  /* border-bottom: 1px solid rgb(230, 230, 230); */
+  color: #65669a;
+  font-weight: 500;
   padding: 0px 0px 0px 0px;
-  font-size: 15pt;
+  font-size: 16px;
+  padding-bottom: 3px;
+  text-align: right;
+}
+
+th.md-table-header:nth-child(1) {
+  text-align: left;
 }
 
 .md-table-header a {
-  margin-left: 15px;
   text-decoration: none;
   color: inherit;
 }
@@ -37,11 +39,9 @@
 }
 
 .md-button.md-default-theme.md-action {
-  border-radius: 50%;
   z-index: 20;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
   border-radius: 50%;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -60,16 +60,17 @@
 .md-table-caret {
   display: inline-block;
   vertical-align: middle;
+  color: #65669a;
 }
 
 .md-table-content {
   font-size: 0.9em;
-  padding: 15px 15px 15px 15px;
+  /* padding: 15px 15px 15px 15px; */
 }
 
 .md-table-footer {
-  margin: 0px 20px 0px 20px;
-  height: 40px;
+  /* margin: 0px 20px 0px 20px; */
+  /* height: 40px; */
 }
 
 .md-table-count-info {
@@ -89,4 +90,23 @@
 
 .md-table-active-page {
   font-weight: 700;
+}
+
+/* Added to customize by Mihai P.*/
+tr.md-table-content-row {
+  background: #fff;
+  border-radius: 5px;
+  border: 4px solid #000;
+  box-shadow: 0 4px 6px 2px rgba(80, 160, 255, 0.15);
+}
+.md-table-content {
+  padding: 35px 30px;
+  text-align: right;
+  font-size: 16px;
+  color: #65669a;
+  font-weight: 400;
+}
+tr.md-table-content-row td:nth-child(1) .md-table-content {
+  text-align: left;
+  font-weight: bold;
 }
