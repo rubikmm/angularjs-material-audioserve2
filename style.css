@@ -1,6 +1,7 @@
 app-component {
   display: block;
   height: 100%;
+  background: #f9fbfc;
 }
 
 app-component md-toolbar {
@@ -71,7 +72,10 @@ md-nav-bar md-nav-ink-bar {
   padding-top: 0;
   color: rgba(101, 102, 154, 0.54);
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 0 25px;
+  padding: 0;
 }
 #as-secondary-menu md-tab-item.md-active {
   color: rgba(101, 102, 154, 1);
@@ -160,35 +164,66 @@ md-input-container:not(.md-input-invalid).md-input-has-value label {
   font-size: 12px;
 }
 
-.mat-tab-content {
-  animation: fade-out 0.5s;
-  opacity: 0;
-}
-.mat-tab-content.mat-tab-content-active {
-  animation: fade-in 0.5s;
-  opacity: 1;
+md-tabs.md-primary > md-tabs-wrapper,
+md-content.md-default-theme,
+md-content {
+  background-color: transparent !important;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.page-title {
+  margin: 0;
+  color: #65669a;
+  font-weight: 500;
+  font-size: 21;
+  letter-spacing: 0;
+}
+.page-subtitle {
+  margin: 0;
+  color: #98a4ba;
+}
+.page-subtitle a:link,
+.page-subtitle a:visited,
+.page-subtitle a:active,
+.page-subtitle a {
+  color: #506cff;
+  font-weight: 500;
 }
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+md-tab-content {
+  padding: 60px 20px;
 }
+
+.md-button {
+  line-height: 10px;
+  padding: 5px 15px;
+}
+
+.btn_createnew {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+  background-color: #65de71;
+  border-radius: 5px;
+  border: 1px solid #54bd5e;
+}
+
+.btn_createnew:not([disabled]):hover {
+  background-color: rgba(107, 103, 91, 0.96);
+  border: 1px solid #999;
+
+  color: white;
+}
+
+.btn_createnew[disabled] {
+  color: rgb(187, 187, 187);
+  background-color: rgba(230, 230, 229, 0.96);
+  border: 1px solid #eee;
+}
+ng-md-icon {
+  margin-right: 5px;
+}
+
+/*
+Table
+*/

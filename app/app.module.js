@@ -3,7 +3,9 @@ import angular from "angular";
 // Create the module where our functionality can attach to
 let appModule = angular.module("app", [require("angular-route")]).config([
   "$locationProvider",
+
   "$routeProvider",
+
   function config($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix("!");
 
@@ -22,7 +24,6 @@ let appModule = angular.module("app", [require("angular-route")]).config([
 ]);
 
 // Controllers
-
 import AppCtrl from "./app.controller";
 import UserInformationCardCtrl from "./user-information-card/user-information-card.controller";
 import PageTab1Ctrl from "./page-tab1/page-tab1.controller";
@@ -30,7 +31,11 @@ import PageTab2Ctrl from "./page-tab2/page-tab2.controller";
 
 appModule.component("appComponent", {
   templateUrl: "app/app.template.html",
-  controller: AppCtrl
+  controller: AppCtrl,
+  function() {
+    this.navbar = "home";
+    console.log(this);
+  }
 });
 
 appModule.component("userInformationCardComponent", {

@@ -5,16 +5,19 @@ import "angular-material-icons";
 
 // Import your app stylesheets
 import "./style.css";
+import "./app/lib/md-table/md-table.css";
 
 // Import your app functionality
 import "./app/app.module.js";
+import "./app/lib/md-table/md-table.js";
 
 // Create and bootstrap application
 const requires = [
   "app",
   "ngMaterial",
   "ngMessages",
-  "ngMdIcons"
+  "ngMdIcons",
+  "mdCustomTable"
 ];
 const app = angular.module("appRoot", requires);
 app.config([
