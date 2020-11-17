@@ -1,30 +1,40 @@
-PAGE TAB 2
-<br>
+<md-content class="md-pad" style="padding:40px;">
+	<h1>Page Tab2</h1>
 
-name = {{name}}<br><br>
-submeniuId = {{submeniuId}}<br><br>
-<br><br>
-$ctrl.name = {{$ctrl.name}}<br><br>
-$ctrl.apiResult = {{$ctrl.apiResult}}<br>
-<br><br>
+	<h3>Variables scope</h3>
+	name = <b>{{name}}</b><br><br>
+  $ctrl.name = <b>{{$ctrl.name}}</b><br><br>
+	<br><br>
+
+	<h3>Sub page from route</h3>
+	submeniuId = <b style="color:green">{{submeniuId}}</b><br><br>
+	<br><br>
+
+	<h3>API sample</h3>
+	$ctrl.apiResult = {{$ctrl.apiResult}}<br>
+	<br><br>
 
 
-Sort by:
-<select ng-model="$ctrl.orderProp">
+	<h3>Simple sortBy and Filter on a table</h3>
+	<b>Sort by:</b>
+	<select ng-model="$ctrl.orderProp">
   <option value="name">Name</option>
   <option value="quantity">Quantity</option>
 </select>
+	<br><br>
 
-<b>Fruits:</b>
-<input ng-model="$ctrl.query">
-<table>
-	<th>
-	<td>Name</td>
-	<td>Quantity</td>
-	</th>
+	<b>Fruits:</b>
+	<input ng-model="$ctrl.query">
+	<table>
+		<th>
+		<td>Name</td>
+		<td>Quantity</td>
+		</th>
 
-	<tr ng-repeat="item in items | filter:$ctrl.query  | orderBy:$ctrl.orderProp">
-		<td>{{item.name}}</td>
-		<td>{{item.quantity}}</td>
-	</tr>
-	</ul>
+		<tr ng-repeat="item in items | filter:$ctrl.query  | orderBy:$ctrl.orderProp">
+			<td>{{item.name}}</td>
+			<td>{{item.quantity}}</td>
+		</tr>
+		</ul>
+
+</md-content>
