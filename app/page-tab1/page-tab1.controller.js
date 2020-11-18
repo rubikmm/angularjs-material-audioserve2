@@ -4,8 +4,20 @@ class PageTab1Ctrl {
     var ctrl = this;
     // TODO add your code here.
 
-    $scope.value = "Hello Angular";
     $scope.pageItems = 5;
+    console.log($scope.pageItemSelected);
+
+    $scope.pageItemsOptions = [
+      { label: "5", value: 5 },
+      { label: "10", value: 10 },
+      { label: "15", value: 15 },
+      { label: "20", value: 20 },
+      { label: "25", value: 25 },
+      { label: "50", value: 50 },
+      { label: "100", value: 100 },
+      { label: "200", value: 200 }
+    ];
+    $scope.pageItemSelected = { label: "5", value: 5 };
 
     $scope.selectedContent = "";
 
@@ -146,6 +158,27 @@ class PageTab1Ctrl {
         },
         {
           name: "Object Name 9",
+          metric1: 900000,
+          metric2: 9000,
+          metric3: 90000,
+          metric4: 9.85
+        },
+        {
+          name: "Object Name 10",
+          metric1: 900000,
+          metric2: 9000,
+          metric3: 90000,
+          metric4: 9.85
+        },
+        {
+          name: "Object Name 11",
+          metric1: 900000,
+          metric2: 9000,
+          metric3: 90000,
+          metric4: 9.85
+        },
+        {
+          name: "Object Name 12",
           metric1: 900000,
           metric2: 9000,
           metric3: 90000,

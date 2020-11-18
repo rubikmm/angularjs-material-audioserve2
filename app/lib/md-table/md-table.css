@@ -60,7 +60,7 @@ th.md-table-header:nth-child(1) {
 .md-table-caret {
   display: inline-block;
   vertical-align: middle;
-  color: #65669a;
+  color: #005bec;
 }
 
 .md-table-content {
@@ -87,11 +87,8 @@ th.md-table-header:nth-child(1) {
 .md-table-page-link {
   text-decoration: none;
 }
-
-.md-table-active-page {
-  font-weight: 700;
+.md-table-page-link {
 }
-
 /* Added to customize by Mihai P.*/
 tr.md-table-content-row {
   background: #fff;
@@ -109,4 +106,40 @@ tr.md-table-content-row {
 tr.md-table-content-row td:nth-child(1) .md-table-content {
   text-align: left;
   font-weight: bold;
+}
+#pagination {
+  padding-top: 40px;
+}
+#pagination a,
+#pagination .md-button {
+  color: #666697;
+  font-size: 14px;
+  font-weight: 400;
+}
+#pagination .md-button {
+  padding: 6px;
+  text-align: center;
+  margin: 0;
+  min-width: auto;
+  min-height: auto;
+  width: auto;
+  height: auto;
+}
+#pagination .md-button.md-table-active-page {
+  background-color: #def2ff;
+  color: rgba(48, 128, 255, 1);
+}
+#pagination .first-item,
+#pagination .last-item {
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+#pagination *[disabled] {
+  color: #dde3ed;
+  text-decoration: none;
+}
+
+.md-table-header a.md-table-active-sort {
+  color: #4091ff;
 }

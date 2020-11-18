@@ -69,6 +69,13 @@
     };
 
     /**
+     * Display first page
+     */
+    $scope.first = function() {
+      $scope.currentPage = 0;
+    };
+
+    /**
      * Display next page
      */
     $scope.next = function() {
@@ -83,6 +90,20 @@
     };
 
     /**
+     * Display last page
+     */
+    $scope.last = function() {
+      $scope.currentPage = $scope.pages.length - 1;
+    };
+
+    /**
+     * Determine if  "First" button is enable
+     */
+    $scope.firstDisabled = function() {
+      return $scope.currentPage === 0;
+    };
+
+    /**
      * Determine if  "Previous" button is enable
      */
     $scope.previousDisabled = function() {
@@ -93,6 +114,16 @@
      * Determine if  "Next" button is enable
      */
     $scope.nextDisabled = function() {
+      return (
+        $scope.pages.length === 0 ||
+        $scope.currentPage === $scope.pages.length - 1
+      );
+    };
+
+    /**
+     * Determine if  "Last" button is enable
+     */
+    $scope.lastDisabled = function() {
       return (
         $scope.pages.length === 0 ||
         $scope.currentPage === $scope.pages.length - 1

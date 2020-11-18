@@ -14,7 +14,8 @@
 				<!-- Content -->
 				<th class="md-table-header" ng-class="headersClass[header.contentField]" ng-repeat="header in headers">
 					<!-- Sortable Field -->
-					<a href ng-click="sort(header.contentField, reverse);" ng-if="header.sortableField">
+					<a href ng-click="sort(header.contentField, reverse);" ng-if="header.sortableField"
+						ng-class="{'md-table-active-sort': header.contentField == predicate}">
 						{{header.label}}
 						<span class="md-table-caret"
             ng-show="reverse && header.contentField == predicate">
@@ -76,26 +77,43 @@
 	</table>
 	<!-- Footer / Pagination -->
 	<div class="md-table-footer" layout="row">
-		<span ng-show="enablePagination">
+		<span ng-show="enablePagination" id="pagination">
       <!-- Previous page -->
-      <md-button aria-label="Previous" class="md-table-footer-item" ng-click="previous()"
-        ng-disabled="previousDisabled();">
-        <i class="material-icons md-18">keyboard_arrow_left</i>
-      </md-button>
-      <!-- Current page selection -->
-      <a class="md-table-page-link" href ng-repeat="page in pages">
-        <md-button aria-label="Index" class="md-primary md-table-footer-item"
-          ng-click="selectPage(page.index)">
-          <span ng-class="{'md-table-active-page': currentPage == page.index}">{{page.index}}</span>
+      <md-button aria-label="First" class="md-table-footer-item first-item" ng-click="first()"
+        ng-disabled="firstDisabled();">
+        <span>First</span>
 		</md-button>
+		<md-button aria-label="Previous" class="md-table-footer-item" ng-click="previous()"
+			ng-disabled="previousDisabled();">
+			<i class="material-icons md-18">keyboard_arrow_left</i>
+		</md-button>
+		<!-- Current page selection -->
+		<a class="md-table-page-link" href ng-repeat="page in pages">
+			<md-button aria-label="Index" class="md-primary md-table-footer-item" ng-click="selectPage(page.index)"
+				ng-class="{'md-table-active-page': currentPage == page.index}">
+				<span>{{page.index}}</span>
+			</md-button>
 		</a>
 		<!-- Next page -->
 		<md-button aria-label="Next" class="md-table-footer-item" ng-click="next()" ng-disabled="nextDisabled();">
 			<i class="material-icons md-18">keyboard_arrow_right</i>
 		</md-button>
+		<md-button aria-label="Last" class="md-table-footer-item last-item" ng-click="last()"
+			ng-disabled="lastDisabled();">
+			<span>Last</span>
+		</md-button>
 		</span>
 		<span flex></span>
-		<span class="md-table-count-info">Rows per page : <a href="#" ng-click="goToPage(0); pageItems=10">10</a> <a href="#" ng-click="goToPage(0); pageItems=25">25</a> <a href="#" ng-click="goToPage(0); pageItems=50">50</a> <a href="#" ng-click="goToPage(0); pageItems=100">100</a>(current is {{pageItems}})</span><span flex="flex"></span>
+		<md-input-container>
+			<md-select ng-model="pageItemSelected">
+				<md-option ng-repeat="option in pageItemsOptions" value="option.value"
+					ng-click="goToPage(0); pageItems=[option.value]">
+					{{option.label}}
+				</md-option>
+			</md-select>
+		</md-input-container>
+
+		<!-- <span class="md-table-count-info">Rows per page : <a href="#" ng-click="goToPage(0); pageItems=10">10</a> <a href="#" ng-click="goToPage(0); pageItems=25">25</a> <a href="#" ng-click="goToPage(0); pageItems=50">50</a> <a href="#" ng-click="goToPage(0); pageItems=100">100</a>(current is {{pageItems}})</span> -->
 
 
 	</div>
