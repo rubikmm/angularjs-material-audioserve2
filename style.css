@@ -242,9 +242,24 @@ button.toolset,
 input.toolset {
   margin: 6px 4px;
 }
+input.toolset {
+  width: 150px;
+  font-size: 14px;
+  transition: width 0.2s ease-in-out;
+}
 input.toolset::placeholder {
   color: rgba(105, 105, 155, 0.2);
   font-size: 12px;
+}
+input.toolset:focus {
+  border: 2px solid rgba(101, 102, 154, 0.54);
+  outline: none;
+  width: 200px;
+  transition: width 0.4s ease-in-out;
+  /* background-color: #eee; */
+}
+input.toolset:focus::placeholder {
+  color: transparent;
 }
 
 md-tab-content {

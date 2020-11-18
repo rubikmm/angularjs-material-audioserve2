@@ -30,7 +30,10 @@ import PageTab2Ctrl from "./page-tab2/page-tab2.controller";
 
 appModule.component("appComponent", {
   templateUrl: "app/app.template.html",
-  controller: AppCtrl
+  controller: AppCtrl,
+  function() {
+    $scope.currentNavItem = "pageTab1";
+  }
 });
 
 appModule.component("userInformationCardComponent", {
