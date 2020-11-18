@@ -143,3 +143,11 @@ tr.md-table-content-row td:nth-child(1) .md-table-content {
 .md-table-header a.md-table-active-sort {
   color: #4091ff;
 }
+
+#itemsPerPage {
+  background-color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}

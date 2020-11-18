@@ -105,9 +105,9 @@
 		</span>
 		<span flex></span>
 		<md-input-container>
-			<md-select ng-model="pageItems">
-				<md-option ng-repeat="opt in ctrl.pageItemsOptions" ng-value="opt.value">
-					{{opt.name}}
+			<md-select ng-model="pageItems" id="itemsPerPage">
+				<md-option value="5" selected>
+					5
 				</md-option>
 			</md-select>
 		</md-input-container>
