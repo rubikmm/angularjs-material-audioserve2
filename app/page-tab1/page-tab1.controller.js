@@ -1,23 +1,23 @@
 class PageTab1Ctrl {
+  pageItemsOptions = [];
+
   constructor($scope, $filter, $mdBottomSheet) {
     "ngInject";
     var ctrl = this;
     // TODO add your code here.
 
-    $scope.pageItems = 5;
-    console.log($scope.pageItemSelected);
-
-    $scope.pageItemsOptions = [
-      { label: "5", value: 5 },
-      { label: "10", value: 10 },
-      { label: "15", value: 15 },
-      { label: "20", value: 20 },
-      { label: "25", value: 25 },
-      { label: "50", value: 50 },
-      { label: "100", value: 100 },
-      { label: "200", value: 200 }
+    ctrl.pageItemsOptions = [
+      { name: "5", value: 5 },
+      { name: "10", value: 10 },
+      { name: "15", value: 15 },
+      { name: "20", value: 20 },
+      { name: "25", value: 25 },
+      { name: "50", value: 50 },
+      { name: "100", value: 100 },
+      { name: "200", value: 200 }
     ];
-    $scope.pageItemSelected = { label: "5", value: 5 };
+
+    $scope.pageItems = 5;
 
     $scope.selectedContent = "";
 

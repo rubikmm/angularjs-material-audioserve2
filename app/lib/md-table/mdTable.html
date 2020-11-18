@@ -105,10 +105,9 @@
 		</span>
 		<span flex></span>
 		<md-input-container>
-			<md-select ng-model="pageItemSelected">
-				<md-option ng-repeat="option in pageItemsOptions" value="option.value"
-					ng-click="goToPage(0); pageItems=[option.value]">
-					{{option.label}}
+			<md-select ng-model="pageItems">
+				<md-option ng-repeat="opt in ctrl.pageItemsOptions" ng-value="opt.value">
+					{{opt.name}}
 				</md-option>
 			</md-select>
 		</md-input-container>
